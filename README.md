@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+MonConnect
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Decentralized Escrow and Dispute Resolution Platform built on Monad Blockchain
 
-## Available Scripts
+MonConnect is a Web3-based platform that enables transparent collaboration between organizers and service providers. It ensures secure transactions through smart contract-based escrow management and introduces a decentralized jury system using AVS (Actively Validated Services) for fair dispute resolution.
 
-In the project directory, you can run:
+-> Features
+ Wallet Integration (MonConnect + MetaMask) — Seamless blockchain login and identity verification.
 
-### `npm start`
+ Organizer & Service Provider Roles — Dual dashboards for managing projects and services.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ Escrow Smart Contract — Funds held securely until both parties confirm task completion.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ Jury-Based Dispute Resolution (AVS) — Decentralized voting mechanism powered by Monad validators.
 
-### `npm test`
+-> NFT Identity — Unique NFTs for verified users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Real-Time Notifications — Transaction and dispute updates instantly shown on dashboard.
 
-### `npm run build`
+ Transparent Ledger — Every transaction and verdict recorded immutably on the Monad blockchain.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ Project Architecture
+MonConnect/
+│
+├── public/
+│   ├── index.html
+│   
+├── src/
+│   ├── components/
+│   ├── pages/
+│   │   ├── LandingPage.js
+│   │   ├── OrganizerDashboard.tsx
+│   │   ├── EscrowAndPayments.tsx
+│   │   ├── JuryPage.tsx
+│   │   └── ...
+│   ├── contracts/
+│   │   ├── Escrow.sol
+│   │   ├── NFTVerify.sol
+│   │   └── ...
+│   ├── utils/
+│   │   ├── escrow.ts
+│   │   ├── nft.ts
+│   └── App.tsx
+│
+└── package.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend: React.js / TypeScript / Tailwind CSS
+Backend: Solidity
+Blockchain: Monad Network
+Smart Contracts: Solidity
+Storage: IPFS (optional for metadata/NFTs)
+Web3 Libraries: Ethers.js, MonConnect SDK
 
-### `npm run eject`
+ Setup & Installation
+# Clone the repository
+git clone https://github.com/<your-username>/MonConnect.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Navigate into the project
+cd MonConnect
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Run the development server
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Smart Contracts
+Contract	Purpose
+Escrow.sol	Handles fund deposit, release, and refund between parties
+NFTVerify.sol	Mints identity NFTs for verified users
 
-## Learn More
+Deploy contracts using in remix ide.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-> Dispute Flow
 
-### Code Splitting
+Organizer or Service Provider raises a dispute.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Consensus is reached; results automatically executed by smart contract.
 
-### Analyzing the Bundle Size
+Rewards or penalties are distributed accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ -> Future Enhancements
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Integration with EigenLayer Restaking for advanced AVS validation.
+SBT for more trust and transperency.
+DAO-based governance for jury selection.

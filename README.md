@@ -19,30 +19,7 @@ MonConnect is a Web3-based platform that enables transparent collaboration betwe
 
  Transparent Ledger — Every transaction and verdict recorded immutably on the Monad blockchain.
 
- Project Architecture
-MonConnect/
-│
-├── public/
-│   ├── index.html
-│   
-├── src/
-│   ├── components/
-│   ├── pages/
-│   │   ├── LandingPage.js
-│   │   ├── OrganizerDashboard.tsx
-│   │   ├── EscrowAndPayments.tsx
-│   │   ├── JuryPage.tsx
-│   │   └── ...
-│   ├── contracts/
-│   │   ├── Escrow.sol
-│   │   ├── NFTVerify.sol
-│   │   └── ...
-│   ├── utils/
-│   │   ├── escrow.ts
-│   │   ├── nft.ts
-│   └── App.tsx
-│
-└── package.json
+
 
  Tech Stack
 
